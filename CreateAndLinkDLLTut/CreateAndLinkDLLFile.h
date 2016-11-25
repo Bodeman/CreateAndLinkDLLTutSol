@@ -9,7 +9,11 @@ extern "C"
 {
 #endif
 
+	bool DLL_EXPORT getInvertedBool(bool boolState);
+	int DLL_EXPORT getIntPlusPlus(int lastInt);
 	float DLL_EXPORT getCircleArea(float radius);
+	
+	//buggy
 	std::string DLL_EXPORT getAdditionalString(std::string baseString);
 
 #ifdef __cplusplus

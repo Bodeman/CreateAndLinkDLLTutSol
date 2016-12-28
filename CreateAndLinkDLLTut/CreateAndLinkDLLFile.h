@@ -1,6 +1,6 @@
 #pragma once  
 
-#include <string>	//needed for std::string
+//#include <string>	//needed for std::string
 
 #define DLL_EXPORT __declspec(dllexport)	//shortens __declspec(dllexport) to DLL_EXPORT
 
@@ -12,9 +12,11 @@ extern "C"
 	bool DLL_EXPORT getInvertedBool(bool boolState);
 	int DLL_EXPORT getIntPlusPlus(int lastInt);
 	float DLL_EXPORT getCircleArea(float radius);
-	
+	char DLL_EXPORT *getCharArray();
+
+
 	//buggy
-	std::string DLL_EXPORT getAdditionalString(std::string baseString);
+	//std::string DLL_EXPORT getAdditionalString(std::string baseString);
 
 #ifdef __cplusplus
 }

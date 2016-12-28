@@ -1,5 +1,8 @@
 #pragma once
 
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
 #include "CreateAndLinkDLLFile.h"
 
 
@@ -21,11 +24,20 @@ float DLL_EXPORT getCircleArea(float radius)
 	return float(3.1416f * (radius * radius));
 }
 
-
-//BUGGY: Exported method that adds a string to a given string
-std::string DLL_EXPORT getAdditionalString(std::string baseString)
+char DLL_EXPORT *getCharArray(  )
 {
-	std::string additionalString = baseString + " + AdditionalStringFromDLL";
+	char* parameterText = "Hello";
+	char* additionalText = " world!";
 	
-	return std::string(additionalString);
+	if (strlen(parameterText) + strlen(additionalText) + 1 > 256)
+	{
+		return "Error: Maximum size of the char array is 256 chars.";
+	}
+
+	char combinedText[256] = "";
+	
+	strcat_s( combinedText, 256, parameterText);
+	strcat_s( combinedText, 256, additionalText);
+	
+	return combinedText;
 }

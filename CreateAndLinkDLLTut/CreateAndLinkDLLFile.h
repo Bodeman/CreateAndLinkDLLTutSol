@@ -12,7 +12,7 @@ extern "C"
 	bool DLL_EXPORT getInvertedBool(bool boolState);
 	int DLL_EXPORT getIntPlusPlus(int lastInt);
 	float DLL_EXPORT getCircleArea(float radius);
-	char DLL_EXPORT *getCharArray();
+	char DLL_EXPORT *getCharArray(char* parameterText);
 
 
 	//buggy

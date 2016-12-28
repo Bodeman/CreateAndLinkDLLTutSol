@@ -24,9 +24,8 @@ float DLL_EXPORT getCircleArea(float radius)
 	return float(3.1416f * (radius * radius));
 }
 
-char DLL_EXPORT *getCharArray(  )
+char DLL_EXPORT *getCharArray(char* parameterText)
 {
-	char* parameterText = "Hello";
 	char* additionalText = " world!";
 	
 	if (strlen(parameterText) + strlen(additionalText) + 1 > 256)

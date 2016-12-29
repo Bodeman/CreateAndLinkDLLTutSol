@@ -1,7 +1,5 @@
 #pragma once
 
-#include "stdio.h"
-#include "stdlib.h"
 #include "string.h"
 #include "CreateAndLinkDLLFile.h"
 
@@ -24,6 +22,7 @@ float DLL_EXPORT getCircleArea(float radius)
 	return float(3.1416f * (radius * radius));
 }
 
+//Exported method that adds a parameter text to an additional text and returns them combined
 char DLL_EXPORT *getCharArray(char* parameterText)
 {
 	char* additionalText = " world!";
@@ -35,8 +34,8 @@ char DLL_EXPORT *getCharArray(char* parameterText)
 
 	char combinedText[256] = "";
 	
-	strcat_s( combinedText, 256, parameterText);
+	strcpy_s( combinedText, 256, parameterText);
 	strcat_s( combinedText, 256, additionalText);
 	
-	return combinedText;
+	return (char*)combinedText;
 }

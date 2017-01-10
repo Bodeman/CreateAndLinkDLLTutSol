@@ -11,6 +11,7 @@ extern "C"
 	int DLL_EXPORT getIntPlusPlus(int lastInt);
 	float DLL_EXPORT getCircleArea(float radius);
 	char DLL_EXPORT *getCharArray(char* parameterText);
+	float DLL_EXPORT *getVector4( float x, float y, float z, float w);
 
 #ifdef __cplusplus
 }
